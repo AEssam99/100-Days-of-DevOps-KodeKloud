@@ -1,13 +1,13 @@
-#Day 1: Linux User Setup with Non-Interactive Shell
+# Day 1: Linux User Setup with Non-Interactive Shell
 
-##Task
+## Task
 
 The system admins team of xFusionCorp Industries has set up scripts on the jump host that run at regular intervals and perform operations on all app servers in the Stratos Datacenter. 
 To make these scripts work properly we need to ensure the thor user on the jump host has password-less SSH access to all app servers through their respective sudo users (for example, tony for app server 1). Perform the steps to set up password-less authentication from thor on the jump host to all app servers.
 
-##Solution
+## Solution
 
-###1) Generate SSH Key (if not already generated)
+### 1) Generate SSH Key (if not already generated)
 Check first:
 ```bash
 ls -la ~/.ssh
@@ -26,14 +26,14 @@ This creates:
 ~/.ssh/id_rsa.pub
 ```
 
-###2)Copy Public Key to Each App Server User
+### 2)Copy Public Key to Each App Server User
 ```bash
 ssh-copy-id tony@172.16.238.10
 ssh-copy-id steve@172.16.238.11
 ssh-copy-id banner@172.16.238.13
 ```
 
-###3)Test Password-less SSH Login
+### 3)Test Password-less SSH Login
 
 From jump host:
 ```bash
@@ -42,7 +42,7 @@ ssh tony@172.16.238.10
 
 It should log in without asking password.
 
-###4)Make Sure Sudo Doesn't Ask Password
+### 4)Make Sure Sudo Doesn't Ask Password
 On each app server, check:
 ```bash
 sudo visudo
@@ -55,7 +55,7 @@ tony ALL=(ALL) NOPASSWD: ALL
 
 Otherwise scripts using sudo will still ask password.
 
-###5)Verification
+### 5)Verification
 
 From jump host:
 ```bash
