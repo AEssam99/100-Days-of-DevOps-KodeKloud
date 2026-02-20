@@ -1,6 +1,6 @@
-#Day 3: Secure Root SSH Access
+# Day 3: Secure Root SSH Access
 
-##Task
+## Task
 
 Following security audits, the xFusionCorp Industries security team has rolled out new protocols, including the restriction of direct root SSH login.
 
@@ -9,9 +9,9 @@ Following security audits, the xFusionCorp Industries security team has rolled o
 Your task is to disable direct SSH root login on all app servers within the Stratos Datacenter.
 
 
-##Solution
+## Solution
 
-###1) Edit SSH configuration
+### 1) Edit SSH configuration
 ```bash
 sudo vi /etc/ssh/sshd_config
 ```
@@ -27,11 +27,11 @@ PermitRootLogin no
 
 If the line is commented (#), uncomment and set to no.
 
-###2) Save and exit (in vi)
+### 2) Save and exit (in vi)
 ```ruby
 :wq
 ```
-###3) Restart SSH service
+### 3) Restart SSH service
 
 ```bash
 sudo systemctl restart sshd
