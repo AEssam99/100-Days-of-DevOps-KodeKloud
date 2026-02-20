@@ -1,24 +1,24 @@
-#Day 4: Script Execution Permissions
+# Day 4: Script Execution Permissions
 
-##Task
+## Task
 
 In a bid to automate backup processes, the xFusionCorp Industries sysadmin team has developed a new bash script named xfusioncorp.sh. While the script has been distributed to all necessary servers, it lacks executable permissions on App Server 2 within the Stratos Datacenter. 
 
 Your task is to grant executable permissions to the /tmp/xfusioncorp.sh script on App Server 2. Additionally, ensure that all users have the capability to execute it.
 
-##Solution
+## Solution
 
-###1) Check permissions
+### 1) Check permissions
 ```bash
 ls -l /tmp/xfusioncorp.sh
 ```
 
-###2) Change the permissions
+### 2) Change the permissions
 ```bash
 sudo chmod 755 /tmp/xfusioncorp.sh
 ```
 
-###3) Try executing the script
+### 3) Try executing the script
 ```bash 
 /tmp/xfusioncorp.sh
 ```
