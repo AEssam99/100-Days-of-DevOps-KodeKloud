@@ -13,7 +13,7 @@ Move them to some appropriate location and deploy the same in Nginx.
 3. Create an index.html file with content Welcome! under Nginx document root.
 
 
-4. For final testing try to access the App Server 3 link (either hostname or IP) from jump host using curl command. For example curl -Ik https://<app-server-ip>/.
+4. For final testing try to access the App Server 3 link (either hostname or IP) from jump host using curl command. For example curl -Ik https://app-server-ip/.
 
 ## Solution
 ### Install and Configure Nginx
@@ -82,6 +82,10 @@ sudo systemctl restart nginx
 ```sh
 sudo systemctl is-active firewalld
 sudo systemctl is-active iptables
+```
+Both:
+```sh
+inactive
 ```
 ### Testing from Jump host
 ```sh
