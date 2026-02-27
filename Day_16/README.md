@@ -160,9 +160,9 @@ sudo systemctl status nginx --no-pager
 ```
 ### Check from LBR server
 ```sh
-curl -I http://stapp01:5000/
-curl -I http://stapp02:5000/
-curl -I http://stapp03:5000/
+curl -I http://stapp01:3000/
+curl -I http://stapp02:3000/
+curl -I http://stapp03:3000/
 curl -I http://localhost/
 ```
 Output
